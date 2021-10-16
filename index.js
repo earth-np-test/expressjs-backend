@@ -37,7 +37,7 @@ app.use("/user", userRouter);
 // basic route
 app.get("/", (req, res) => {
   console.log("Hi from /");
-  res.send("Hello from Express");
+  res.send("Hello world earth");
 });
 
 app.all("*", (req, res) => {
