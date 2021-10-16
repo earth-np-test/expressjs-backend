@@ -46,13 +46,14 @@ app.all("*", (req, res) => {
 
 // start app
 
+const port = process.env.PORT || 8080;
+
 mongoose
   .connect(
     "mongodb+srv://earth:testtest123123@cluster0.olxyu.mongodb.net/mern?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Connect mongodb success");
-    const port = 4000;
 
     app.listen(port, () => {
       console.log("Run server on port:", port);
